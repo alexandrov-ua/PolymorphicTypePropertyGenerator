@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphicTypePropertyGenerator", "PolymorphicTypePropertyGenerator\PolymorphicTypePropertyGenerator.csproj", "{87D138CC-0926-42E2-8B48-22E9F0050730}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphicTypePropertyGenerator.App", "PolymorphicTypePropertyGenerator.App\PolymorphicTypePropertyGenerator.App.csproj", "{586A92B3-60F5-4588-A316-6F0D508BBC59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphicTypePropertyGenerator.Tests", "PolymorphicTypePropertyGenerator.Tests\PolymorphicTypePropertyGenerator.Tests.csproj", "{B13941F3-E37E-496A-BA24-35EA1CA1331E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87D138CC-0926-42E2-8B48-22E9F0050730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D138CC-0926-42E2-8B48-22E9F0050730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D138CC-0926-42E2-8B48-22E9F0050730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D138CC-0926-42E2-8B48-22E9F0050730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{586A92B3-60F5-4588-A316-6F0D508BBC59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{586A92B3-60F5-4588-A316-6F0D508BBC59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{586A92B3-60F5-4588-A316-6F0D508BBC59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{586A92B3-60F5-4588-A316-6F0D508BBC59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B13941F3-E37E-496A-BA24-35EA1CA1331E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B13941F3-E37E-496A-BA24-35EA1CA1331E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B13941F3-E37E-496A-BA24-35EA1CA1331E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B13941F3-E37E-496A-BA24-35EA1CA1331E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
