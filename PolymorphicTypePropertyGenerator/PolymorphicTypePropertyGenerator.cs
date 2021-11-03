@@ -29,7 +29,7 @@ namespace {0}
 }}
 ";
 
-        private const string DerivedTemplate = @"
+        private const string BaseTypeTemplate = @"
 namespace {0}
 {{
     public partial class {1} : {2}
@@ -45,13 +45,13 @@ namespace {0}
             {
                 foreach (var root in syntaxReceiver.Roots)
                 {
-                    var derived = syntaxReceiver.GetAllDerivedTypes(root.DisplayName).ToArray();
-                    var source = String.Format(RootTemplate, root.Namespace, root.Name, string.Join(",\n", derived.Select(t=>t.Name)));
+                    var baseTypes = syntaxReceiver.GetBaseTypes(root.DisplayName).ToArray();
+                    var source = String.Format(RootTemplate, root.Namespace, root.Name, string.Join(",\n", baseTypes.Select(t=>t.Name)));
                     context.AddSource($"{root.Name}_PolymorphicTypePropertyGenerator.cs", SourceText.From(source, Encoding.UTF8));
-                    foreach (var d in derived)
+                    foreach (var baseType in baseTypes)
                     {
-                        var src = string.Format(DerivedTemplate, d.Namespace, d.Name, root.Name);
-                        context.AddSource($"{d.Name}_PolymorphicTypePropertyGenerator.cs", SourceText.From(src, Encoding.UTF8));
+                        var baseSource = string.Format(BaseTypeTemplate, baseType.Namespace, baseType.Name, root.Name);
+                        context.AddSource($"{baseType.Name}_PolymorphicTypePropertyGenerator.cs", SourceText.From(baseSource, Encoding.UTF8));
                     }
                 }
             }

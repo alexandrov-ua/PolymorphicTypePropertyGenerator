@@ -11,9 +11,9 @@ namespace PolymorphicTypePropertyGenerator
         public List<ClassNodeInfo> Nodes { get; } = new List<ClassNodeInfo>();
         public List<ClassNodeInfo> Roots { get; } = new List<ClassNodeInfo>();
 
-        public IEnumerable<ClassNodeInfo> GetAllDerivedTypes(string name)
+        public IEnumerable<ClassNodeInfo> GetBaseTypes(string name)
         {
-            var result = Nodes.Where(t => t.DerivedNodeName == name);
+            var result = Nodes.Where(t => t.BaseTypeName == name);
             return result;
         }
 
@@ -45,21 +45,5 @@ namespace PolymorphicTypePropertyGenerator
                 }
             }
         } 
-    }
-
-    class ClassNodeInfo
-    {
-        public string DisplayName { get; } 
-        public string Namespace { get; } 
-        public string DerivedNodeName { get; }
-
-        public ClassNodeInfo(string displayName, string @namespace, string derivedNodeName) 
-        { 
-            DisplayName = displayName; 
-            Namespace = @namespace; 
-            DerivedNodeName = derivedNodeName; 
-        }
-
-        public string Name => DisplayName.Split('.').Last();
     }
 }

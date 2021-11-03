@@ -39,8 +39,9 @@ namespace Test.App
             syntaxReceiver.Nodes.Should().Contain(new ClassNodeInfo("Test.App.Program", "Test.App", "object"));
             syntaxReceiver.Nodes.Should().Contain(new ClassNodeInfo("Test.App.Foo", "Test.App", "object"));
             syntaxReceiver.Nodes.Should().Contain(new ClassNodeInfo("Test.App.Bar", "Test.App", "Test.App.Foo"));
-            syntaxReceiver.Roots.Should().Contain(new ClassNodeInfo("Test.App.Baz", "Test.App", "object"));
             syntaxReceiver.Nodes.Should().Contain(new ClassNodeInfo("Test.App.Qux", "Test.App", "Test.App.Baz"));
+
+            syntaxReceiver.Roots.Should().Contain(new ClassNodeInfo("Test.App.Baz", "Test.App", "object"));
             syntaxReceiver.Roots.Should().Contain(new ClassNodeInfo("Test.App.Zxc", "Test.App", "object"));
         }
     }

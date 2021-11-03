@@ -1,4 +1,6 @@
+using System.Linq;
 using Xunit;
+using FluentAssertions;
 
 namespace PolymorphicTypePropertyGenerator.Tests
 {
@@ -7,7 +9,7 @@ namespace PolymorphicTypePropertyGenerator.Tests
         [Fact]
         public void Foo()
         {
-            Tools.Run<PolymorphicTypePropertyGenerator>(@"
+            var results = Tools.Run<PolymorphicTypePropertyGenerator>(@"
 using System;
 using PolymorphicTypePropertyGenerator;
 namespace Qwe
@@ -26,6 +28,12 @@ namespace Qwe
     }
 }
 ");
+
+            var generatedSources = results.Single().GeneratedSources;
+            generatedSources.Should().Contain(t => t.HintName == "Foo_PolymorphicTypePropertyGenerator.cs");
+            generatedSources.Should().Contain(t => t.HintName == "Bar_PolymorphicTypePropertyGenerator.cs");
+            generatedSources.Should().Contain(t => t.HintName == "Baz_PolymorphicTypePropertyGenerator.cs");
+
         }
     }
 }
