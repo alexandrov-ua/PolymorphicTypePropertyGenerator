@@ -7,12 +7,12 @@
     <ItemGroup>
         <!-- Note that this is not a "normal" ProjectReference.
              It needs the additional 'OutputItemType' and 'ReferenceOutputAssembly' attributes. -->
-        <ProjectReference Include="../PolymorphicTypePropertyGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-        <ProjectReference Include="..\PolymorphicTypePropertyGenerator\PolymorphicTypePropertyGenerator.csproj" />
+        <ProjectReference Include="..\PolymorphicTypePropertyGenerator\PolymorphicTypePropertyGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="true" />
+<!--        <ProjectReference Include="..\PolymorphicTypePropertyGenerator\PolymorphicTypePropertyGenerator.csproj" />-->
     </ItemGroup>
-    <ItemGroup>
-        <Analyzer Include="../PolymorphicTypePropertyGenerator/bin/Debug/net5.0/PolymorphicTypePropertyGenerator.dll" />
-    </ItemGroup>
+<!--    <ItemGroup>-->
+<!--        <Analyzer Include="../PolymorphicTypePropertyGenerator/bin/Debug/net5.0/PolymorphicTypePropertyGenerator.dll" />-->
+<!--    </ItemGroup>-->
     <ItemGroup>
       <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     </ItemGroup>

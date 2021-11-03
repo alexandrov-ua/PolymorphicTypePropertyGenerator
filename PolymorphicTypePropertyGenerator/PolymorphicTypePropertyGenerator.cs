@@ -24,7 +24,7 @@ namespace {0}
 
     public partial class {1}
     {{
-        public {1}Type Type {{ get; }}
+        public virtual {1}Type Type {{ get; }}
     }}
 }}
 ";
@@ -34,7 +34,7 @@ namespace {0}
 {{
     public partial class {1} : {2}
     {{
-        public {2}Type Type {{ get=> {2}Type.{1}; }}
+        public override {2}Type Type {{ get=> {2}Type.{1}; }}
     }}
 }}
 ";

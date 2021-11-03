@@ -21,8 +21,11 @@ namespace PolymorphicTypePropertyGenerator
         {
             if (context.Node is TypeDeclarationSyntax typeDeclarationSyntax)
             {
-                if (typeDeclarationSyntax is InterfaceDeclarationSyntax or StructDeclarationSyntax)
+                if (typeDeclarationSyntax is InterfaceDeclarationSyntax)
                     return;
+                if (typeDeclarationSyntax is StructDeclarationSyntax)
+                    return;
+
                 var classSymbol = context.SemanticModel.GetDeclaredSymbol(typeDeclarationSyntax);
                 if (classSymbol is null)
                     return;
@@ -44,8 +47,19 @@ namespace PolymorphicTypePropertyGenerator
         } 
     }
 
-    record ClassNodeInfo(string DisplayName, string Namespace, string DerivedNodeName)
+    class ClassNodeInfo
     {
+        public string DisplayName { get; } 
+        public string Namespace { get; } 
+        public string DerivedNodeName { get; }
+
+        public ClassNodeInfo(string displayName, string @namespace, string derivedNodeName) 
+        { 
+            DisplayName = displayName; 
+            Namespace = @namespace; 
+            DerivedNodeName = derivedNodeName; 
+        }
+
         public string Name => DisplayName.Split('.').Last();
     }
 }
