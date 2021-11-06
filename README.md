@@ -1,4 +1,7 @@
 [![build](https://github.com/alexandrov-ua/PolymorphicTypePropertyGenerator/actions/workflows/build.yml/badge.svg)](https://github.com/alexandrov-ua/PolymorphicTypePropertyGenerator/actions/workflows/build.yml/badge.svg)
+[![publish](https://github.com/alexandrov-ua/PolymorphicTypePropertyGenerator/actions/workflows/publish.yml/badge.svg)](https://github.com/alexandrov-ua/PolymorphicTypePropertyGenerator/actions/workflows/publish.yml/badge.svg)
+[![](https://img.shields.io/github/release/alexandrov-ua/PolymorphicTypePropertyGenerator.svg?label=latest%20release)](https://github.com/alexandrov-ua/PolymorphicTypePropertyGenerator/releases/latest)
+[![](https://img.shields.io/nuget/dt/PolymorphicTypePropertyGenerator.svg?label=nuget%20downloads)](https://www.nuget.org/packages/PolymorphicTypePropertyGenerator/)
 ## Description:
 
 Library for generating Type property and enum for polymorphic types.
