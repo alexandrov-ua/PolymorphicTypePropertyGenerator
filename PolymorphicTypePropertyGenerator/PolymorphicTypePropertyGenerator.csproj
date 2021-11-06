@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -10,5 +10,22 @@
   <PropertyGroup>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
+    <Authors>alexandrov.ua@gmail.com</Authors>
+    <Company>-</Company>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/alexandrov-ua/PolymorphicTypePropertyGenerator</RepositoryUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <Copyright>Copyright Aleksandr Aleksandrov 2021</Copyright>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/alexandrov-ua/PolymorphicTypePropertyGenerator</PackageProjectUrl>
+    <PackageTags>PolymorphicTypePropertyGenerator;SourceGenerators;Generator</PackageTags>
+    <PackageReleaseNotes>See https://github.com/alexandrov-ua/PolymorphicTypePropertyGenerator/releases</PackageReleaseNotes>
+    <Description>Library for generating Type property and enum for polymorphic types.
+
+Details: https://github.com/alexandrov-ua/PolymorphicTypePropertyGenerator#readme</Description>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+  </ItemGroup>
 </Project>
