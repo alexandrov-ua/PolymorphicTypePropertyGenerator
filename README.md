@@ -1,3 +1,4 @@
+[![build](https://github.com/alexandrov-ua/PolymorphicTypePropertyGenerator/actions/workflows/build.yml/badge.svg)](https://github.com/alexandrov-ua/PolymorphicTypePropertyGenerator/actions/workflows/build.yml/badge.svg)
 ## Description:
 
 Library for generating Type property and enum for polymorphic types.
