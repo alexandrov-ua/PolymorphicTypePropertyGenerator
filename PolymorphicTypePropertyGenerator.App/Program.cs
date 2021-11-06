@@ -9,6 +9,7 @@ namespace PolymorphicTypePropertyGenerator.App
         {
             Foo bar = new Baz();
             Console.WriteLine(JsonConvert.SerializeObject(bar));
+            Console.WriteLine(bar.Type);
         }
     }
 
