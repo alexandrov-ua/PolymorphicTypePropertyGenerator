@@ -15,9 +15,9 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-    - name: Restore dependencies
-      run: dotnet restore
     - name: Pack
       run: dotnet pack ./PolymorphicTypePropertyGenerator/PolymorphicTypePropertyGenerator.csproj -c Release -p:Version=${{ github.event.release.tag_name }} -o ./out
+    - name: Publish
+      run: dotnet nuget push ./out/PolymorphicTypePropertyGenerator*.nupkg --api-key ${{ secrets.NUGET_KEY }} --source https://api.nuget.org/v3/index.json
 
 
