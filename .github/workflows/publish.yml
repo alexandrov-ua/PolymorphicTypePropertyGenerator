@@ -1,4 +1,4 @@
-name: .NET
+name: NUGET
 
 on:
   release:
